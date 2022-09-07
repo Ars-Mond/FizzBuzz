@@ -23,8 +23,9 @@ public class Core
         for (int i = 0; i < _count; i++)
         {
             _data[i] = i.ToString();
-            if(i%3 == 0) _data[i] = _fizz;
-            else if(i%5 == 0) _data[i] = _buzz;
+            if (i % 3 + i % 5 == 0) _data[i] = _fizz + _buzz;
+            else if (i % 3 == 0) _data[i] = _fizz;
+            else if (i % 5 == 0) _data[i] = _buzz;
         }
 
         return _data;
